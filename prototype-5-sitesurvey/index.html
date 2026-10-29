@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Topografica S.r.l. — Rilievi topografici per infrastrutture, territorio ed edifici. Prototipo: Cantiere Vivo / Site Survey.">
+  <title>Topografica — Cantiere Vivo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <a href="#main" class="skip-link">Vai al contenuto principale</a>
+
+  <!-- Hero Video/Background -->
+  <div class="hero-media" id="hero-media" aria-hidden="true">
+    <div class="media-layer" data-depth="0"></div>
+    <div class="media-overlay"></div>
+    <div class="media-vignette"></div>
+  </div>
+
+  <!-- Floating Particles/Dust -->
+  <canvas class="dust-canvas" id="dust-canvas" aria-hidden="true"></canvas>
+
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <div class="logo-group">
+        <svg class="logo-mark" viewBox="0 0 120 32" aria-hidden="true">
+          <text x="0" y="22" font-family="IBM Plex Sans, sans-serif" font-weight="700" font-size="22" fill="none" letter-spacing="0.02em">
+            <tspan class="logo-top" fill="#ff6b35">TOP</tspan><tspan class="logo-rest" fill="#f5f0e8">OGRAFICA</tspan>
+          </text>
+        </svg>
+        <span class="logo-divider" aria-hidden="true"></span>
+        <p class="payoff">IL CARATTERE DEL TOPOGRAFO È LA FEDELTÀ AL DATO RILEVATO</p>
+      </div>
+      <nav class="header-actions" aria-label="Azioni principali">
+        <a href="#contact" class="btn btn--ghost" data-scroll>Contatti</a>
+        <a href="tel:+390573534569" class="btn btn--primary" aria-label="Chiama 0573 534569">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span>0573 534569</span>
+        </a>
+      </nav>
+    </div>
+    <div class="scroll-progress" id="scroll-progress" aria-hidden="true"><span></span></div>
+  </header>
+
+  <main id="main" role="main">
+    <!-- HERO: Immersive Construction Site -->
+    <section class="hero" id="hero" aria-labelledby="hero-title">
+      <div class="hero-content">
+        <div class="instrument-display" id="instrument-display" role="img" aria-label="Display stazione totale Leica TSA15" aria-live="polite" data-scroll-reveal>
+          <div class="display-frame">
+            <div class="display-header">
+              <span class="display-brand">Leica</span>
+              <span class="display-model">TSA15</span>
+              <span class="display-status" id="display-status">● TRACKING</span>
+            </div>
+            <div class="display-screen">
+              <dl class="display-coords">
+                <div><dt>PT</dt><dd id="disp-pt">1042</dd></div>
+                <div><dt>Hz</dt><dd id="disp-hz">124°32'15"</dd></div>
+                <div><dt>V</dt><dd id="disp-v">87°45'30"</dd></div>
+                <div><dt>SD</dt><dd id="disp-sd">142.356</dd></div>
+                <div class="coords-row">
+                  <dt>E</dt><dd id="disp-e">1642312.45</dd>
+                </div>
+                <div class="coords-row">
+                  <dt>N</dt><dd id="disp-n">4837215.89</dd>
+                </div>
+                <div class="coords-row">
+                  <dt>H</dt><dd id="disp-h">62.340</dd>
+                </div>
+              </dl>
+              <div class="display-footer">
+                <span>HT: 1.650</span>
+                <span>HR: 1.500</span>
+                <span>PPM: 12.3</span>
+              </div>
+            </div>
+            <div class="display-keys">
+              <button class="disp-key" data-key="MEAS" aria-label="Misura">MEAS</button>
+              <button class="disp-key" data-key="REC" aria-label="Registra">REC</button>
+              <button class="disp-key" data-key="FNC" aria-label="Funzione">FNC</button>
+              <button class="disp-key" data-key="ESC" aria-label="Esci">ESC</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-text" data-scroll-reveal>
+          <p class="hero-eyebrow">Stazione 1042 — Careggi, Firenze</p>
+          <h1 id="hero-title" class="hero-title">
+            Rilievi topografici<br>per infrastrutture, territorio ed edifici.
+          </h1>
+          <p class="hero-subtitle">
+            Sul campo. In tempo reale. Con i tuoi dati.
+          </p>
+
+          <div class="hero-stats" data-scroll-reveal>
+            <div class="stat">
+              <span class="stat-value" data-count="35">0</span><span class="stat-unit">km</span>
+              <span class="stat-label">reti rilevate</span>
+            </div>
+            <div class="stat-divider" aria-hidden="true"></div>
+            <div class="stat">
+              <span class="stat-value" data-count="27">0</span><span class="stat-unit">km</span>
+              <span class="stat-label">cerchia Pistoia</span>
+            </div>
+            <div class="stat-divider" aria-hidden="true"></div>
+            <div class="stat">
+              <span class="stat-value" data-count="3">0</span><span class="stat-unit">×</span>
+              <span class="stat-label">soci senior</span>
+            </div>
+          </div>
+
+          <div class="hero-cta" data-scroll-reveal>
+            <a href="#services" class="btn btn--primary btn--large" data-scroll>Apri Libretto di Campagna</a>
+            <a href="#projects" class="btn btn--outline btn--large" data-scroll>Sfoglia Progetti</a>
+          </div>
+        </div>
+
+        <div class="scroll-indicator" data-scroll-reveal>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+          <span>Scendi in cantiere</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES: Field Book Entries -->
+    <section id="services" class="services" aria-labelledby="services-title">
+      <div class="section-header" data-scroll-reveal>
+        <span class="section-tag">LIBRETTO DI CAMPAGNA</span>
+        <h2 id="services-title" class="section-title">Voci di Rilievo</h2>
+        <p class="section-desc">Ogni voce è una stazione di lavoro: codice, strumentazione, precisione, restituzioni.</p>
+      </div>
+
+      <div class="field-book" id="field-book">
+        <!-- Populated by JS -->
+      </div>
+
+      <!-- Service Detail Drawer -->
+      <aside class="field-drawer" id="field-drawer" role="dialog" aria-labelledby="drawer-title" hidden>
+        <div class="drawer-header">
+          <h3 id="drawer-title" class="drawer-title"></h3>
+          <button class="drawer-close" aria-label="Chiudi voce">&times;</button>
+        </div>
+        <div class="drawer-content"></div>
+      </aside>
+    </section>
+
+    <!-- PROJECTS: Field Pages with Parallax -->
+    <section id="projects" class="projects" aria-labelledby="projects-title">
+      <div class="section-header" data-scroll-reveal>
+        <span class="section-tag">PAGINE DI TACCUINO</span>
+        <h2 id="projects-title" class="section-title">Progetti come Field Pages</h2>
+        <p class="section-desc">Schizzi quotati, note di campagna, committenza. Scroll per rivelare i layer.</p>
+      </div>
+
+      <div class="field-pages" id="field-pages">
+        <!-- Populated by JS -->
+      </div>
+    </section>
+
+    <!-- TEAM: Survey Crew -->
+    <section id="team" class="team" aria-labelledby="team-title">
+      <div class="section-header" data-scroll-reveal>
+        <span class="section-tag">SQUADRA DI RILIEVO</span>
+        <h2 id="team-title" class="section-title">Operatori sul Campo</h2>
+        <p class="section-desc">Tre capisaldi. Competenze complementari. Sempre in stazione.</p>
+      </div>
+
+      <div class="crew-grid" id="crew-grid">
+        <!-- Populated by JS -->
+      </div>
+    </section>
+
+    <!-- COMPANY: Technical Specs -->
+    <section id="company" class="company" aria-labelledby="company-title">
+      <div class="section-header" data-scroll-reveal>
+        <span class="section-tag">SCHEDA TECNICA</span>
+        <h2 id="company-title" class="section-title">Specifiche Operative</h2>
+      </div>
+
+      <div class="tech-spec" data-scroll-reveal>
+        <dl class="spec-list">
+          <div class="spec-item">
+            <dt>Strumentazione Principale</dt>
+            <dd>Stazioni totali Leica TSA15, TCA2003 motorizzate con telemetria GSM; GNSS multi-costellazione RTK; Livelli precisione Leica DNA03/NA2 (stadie Invar); Attrezzatura radiocomandata per ispezione ipogea; Laser scanner (partner per nuvole dense)</dd>
+          </div>
+          <div class="spec-item">
+            <dt>Precisioni Operative</dt>
+            <dd>Planimetrica: ±3 mm + 1 ppm; Altimetrica livellazione: ±0.5 mm/√km; GPS RTK: ±8 mm + 1 ppm; Monitoraggio continuo: ±2 mm</dd>
+          </div>
+          <div class="spec-item">
+            <dt>Software & Elaborazione</dt>
+            <dd>Leica Infinity, Cyclone, GeoOffice; AutoCAD Civil 3D; QGIS/ArcGIS; Python per automazioni; Elaborazione nuvole punti CloudCompare</dd>
+          </div>
+          <div class="spec-item">
+            <dt>Normativa & Sicurezza</dt>
+            <dd>D.Lgs 81/08 (POS, Piani Sicurezza, Formazione); L. 818/84 Prevenzione Incendi; Normativa Catastale (Tipi Frazionamento, Mappe Aggiornamento); Specifiche Committenza (Nuove Acque, Provincia, CONI, Agip)</dd>
+          </div>
+          <div class="spec-item">
+            <dt>Committenze Storiche</dt>
+            <dd>Nuove Acque S.p.A. (Arezzo), Provincia di Pistoia (SS.66, SR.66, Frascari), CONI Pistoia (Legnorosso), Agip Petroli S.p.A. (Gaeta-Pomezia), Giusti per l'Edilizia (Ex-Breda), AOU Careggi (Firenze), Hydrocek srl, Hyper srl</dd>
+          </div>
+          <div class="spec-item">
+            <dt>Estensioni Rilevate</dt>
+            <dd>35 km rete fognaria area fiorentina (Campi Bisenzio–Peretola); 27 km 3ª cerchia muraria Pistoia; Varianti SS.66/SR.66 multiple; Oleodotto Gaeta-Pomezia; Impianti sportivi CONI; Aree ex-industriali (Ex-Breda)</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- CONTACT: Direct Radio -->
+    <section id="contact" class="contact" aria-labelledby="contact-title">
+      <div class="section-header" data-scroll-reveal>
+        <span class="section-tag">RADIO DIRETTA</span>
+        <h2 id="contact-title" class="section-title">Canale Aperto</h2>
+        <p class="section-desc">Nessun modulo. Frequenza diretta con i tecnici.</p>
+      </div>
+
+      <div class="radio-channels" data-scroll-reveal>
+        <a href="tel:+390573534569" class="radio-channel radio-channel--primary">
+          <div class="channel-indicator" aria-hidden="true">
+            <span class="signal-bars"><span></span><span></span><span></span><span></span></span>
+            <span class="channel-status">ON AIR</span>
+          </div>
+          <div class="channel-info">
+            <h3>Chiamata Vocale</h3>
+            <p class="channel-value">0573 534569</p>
+            <p class="channel-hint">Risponde il caposquadra di turno</p>
+          </div>
+        </a>
+
+        <a href="mailto:info@topograficasrl.com" class="radio-channel">
+          <div class="channel-indicator" aria-hidden="true">
+            <span class="signal-bars"><span></span><span></span><span></span><span></span></span>
+            <span class="channel-status">PRONTO</span>
+          </div>
+          <div class="channel-info">
+            <h3>Messaggio Dati</h3>
+            <p class="channel-value">info@topograficasrl.com</p>
+            <p class="channel-hint">Allegati: DWG, PDF, CSV, LAS</p>
+          </div>
+        </a>
+
+        <a href="https://maps.google.com/?q=Via+Fonda+di+Sant'Agostino+4%2FF+Pistoia" target="_blank" rel="noopener" class="radio-channel">
+          <div class="channel-indicator" aria-hidden="true">
+            <span class="signal-bars"><span></span><span></span><span></span><span></span></span>
+            <span class="channel-status">COORDINATE</span>
+          </div>
+          <div class="channel-info">
+            <h3>Naviga alla Base</h3>
+            <p class="channel-value">Via Fonda di Sant'Agostino 4/F</p>
+            <p class="channel-hint">51100 Pistoia (PT) — E: 1642312 N: 4837215</p>
+          </div>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <svg class="logo-mark" viewBox="0 0 120 32" aria-hidden="true">
+          <text x="0" y="22" font-family="IBM Plex Sans, sans-serif" font-weight="700" font-size="22" fill="none">
+            <tspan class="logo-top" fill="#ff6b35">TOP</tspan><tspan class="logo-rest" fill="#f5f0e8">OGRAFICA</tspan>
+          </text>
+        </svg>
+        <p class="payoff">IL CARATTERE DEL TOPOGRAFO È LA FEDELTÀ AL DATO RILEVATO</p>
+      </div>
+      <div class="footer-links">
+        <a href="#services" data-scroll>Libretto di Campagna</a>
+        <a href="#projects" data-scroll>Pagine di Taccuino</a>
+        <a href="#team" data-scroll>Squadra</a>
+        <a href="#company" data-scroll>Scheda Tecnica</a>
+        <a href="#contact" data-scroll>Canale Aperto</a>
+      </div>
+      <div class="footer-legal">
+        <p>&copy; 2025 Topografica S.r.l. — Tutti i diritti riservati.</p>
+        <p class="footer-note">Prototipo: Cantiere Vivo / Site Survey — Zero form · Zero tracking · Zero cookie non essenziali</p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

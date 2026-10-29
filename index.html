@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Topografica S.r.l. — Tre prototipi per il nuovo sito vetrina. Scegli la direzione visiva.">
+  <title>Topografica — Prototypes Overview</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-vacuum: #0a0f1a;
+      --color-vacuum-elevated: #1a2332;
+      --color-signal-teal: #00d4aa;
+      --color-instrument-orange: #ff6b35;
+      --color-white-cold: #e8eef2;
+      --color-text-muted: #c8d4dc;
+      --color-text-dim: #6b7c8a;
+      --color-border: #2a3a4a;
+      --font-display: 'IBM Plex Sans', system-ui, sans-serif;
+      --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+      --font-ui: 'IBM Plex Sans', system-ui, sans-serif;
+      --space-xs: 0.25rem; --space-sm: 0.5rem; --space-md: 1rem;
+      --space-lg: 1.5rem; --space-xl: 2rem; --space-2xl: 3rem;
+      --space-3xl: 4rem; --container-max: 1100px;
+    }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; background: var(--color-vacuum); color: var(--color-white-cold); font-family: var(--font-ui); line-height: 1.6; }
+    a { color: var(--color-signal-teal); } a:hover { color: var(--color-white-cold); }
+    .container { max-width: var(--container-max); margin: 0 auto; padding: var(--space-3xl) var(--space-xl); }
+    header { text-align: center; margin-bottom: var(--space-3xl); }
+    .logo { font-family: var(--font-display); font-weight: 700; font-size: 2.5rem; margin: 0 0 var(--space-xs); }
+    .logo-top { color: var(--color-instrument-orange); } .logo-rest { color: var(--color-white-cold); }
+    .payoff { font-family: var(--font-mono); font-size: 0.75rem; font-weight: 500; color: var(--color-text-dim); letter-spacing: 0.1em; text-transform: uppercase; margin: 0 0 var(--space-lg); }
+    h1 { font-family: var(--font-display); font-size: clamp(1.75rem, 4vw, 2.5rem); font-weight: 600; margin: 0 0 var(--space-md); }
+    .lead { font-size: 1.125rem; color: var(--color-text-muted); max-width: 60ch; margin: 0 auto var(--space-3xl); }
+    .prototypes { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--space-xl); }
+    .proto-card { background: var(--color-vacuum-elevated); border: 1px solid var(--color-border); border-radius: 12px; padding: var(--space-xl); display: flex; flex-direction: column; transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s; }
+    .proto-card:hover { border-color: var(--color-instrument-orange); transform: translateY(-4px); box-shadow: 0 16px 40px rgba(0,0,0,0.3); }
+    .proto-badge { font-family: var(--font-mono); font-size: 0.7rem; font-weight: 600; color: var(--color-instrument-orange); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: var(--space-md); }
+    .proto-title { font-family: var(--font-display); font-size: 1.375rem; font-weight: 600; color: var(--color-white-cold); margin: 0 0 var(--space-md); }
+    .proto-desc { font-size: 0.95rem; color: var(--color-text-muted); line-height: 1.7; margin: 0 0 var(--space-lg); flex: 1; }
+    .proto-features { list-style: none; padding: 0; margin: 0 0 var(--space-xl); font-size: 0.875rem; color: var(--color-text-dim); }
+    .proto-features li { padding: var(--space-xs) 0; display: flex; align-items: center; gap: var(--space-sm); }
+    .proto-features li::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--color-instrument-orange); flex-shrink: 0; }
+    .proto-btn { display: inline-flex; align-items: center; justify-content: center; gap: var(--space-sm); padding: var(--space-sm) var(--space-lg); background: var(--color-instrument-orange); color: var(--color-vacuum); font-family: var(--font-ui); font-size: 0.875rem; font-weight: 600; border: none; border-radius: 4px; cursor: pointer; text-decoration: none; transition: background 0.2s, transform 0.2s; }
+    .proto-btn:hover { background: #cc552a; transform: translateY(-1px); color: var(--color-vacuum); }
+    .proto-btn.secondary { background: transparent; border: 2px solid var(--color-instrument-orange); color: var(--color-instrument-orange); }
+    .proto-btn.secondary:hover { background: var(--color-instrument-orange); color: var(--color-vacuum); }
+    .assigned-badge { background: var(--color-instrument-orange); color: var(--color-vacuum); padding: 2px 8px; border-radius: 100px; font-size: 0.65rem; font-weight: 700; margin-left: var(--space-sm); vertical-align: middle; }
+    footer { text-align: center; padding: var(--space-2xl); border-top: 1px solid var(--color-border); color: var(--color-text-dim); font-size: 0.875rem; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <p class="logo"><span class="logo-top">TOP</span><span class="logo-rest">OGRAFICA</span></p>
+      <p class="payoff">IL CARATTERE DEL TOPOGRAFO È LA FEDELTÀ AL DATO RILEVATO</p>
+      <h1>Tre prototipi per il nuovo sito</h1>
+      <p class="lead">Direzioni visive distinte, tutte code-first, nessuna con form di contatto. Scegli una per approfondire o apri tutte e tre a confronto.</p>
+    </header>
+
+    <main>
+      <div class="prototypes">
+        <article class="proto-card">
+          <span class="proto-badge">ASSEGNATA <span class="assigned-badge">THE ROLL</span></span>
+          <h2 class="proto-title">Nuvole di punti / Laser scanner</h2>
+          <p class="proto-desc">La homepage è una nuvola di punti 3D navigabile (WebGL) di un cantiere reale. Quattro cluster colorati rappresentano i servizi; al passaggio rivelano dettaglio tecnico come event display. Scroll = profili quota ortogonali.</p>
+          <ul class="proto-features">
+            <li>Canvas WebGL full-bleed, 50k punti, rotazione lenta</li>
+            <li>Cluster interattivi → event panel laterale</li>
+            <li>Sezioni ortogonali SVG/Canvas per profili quota</li>
+            <li>Servizi come definition list tecniche</li>
+            <li>Progetti espandibili, testimonianze, team, contatti diretti</li>
+          </ul>
+          <a href="prototype-1-point-cloud/index.html" class="proto-btn">Apri prototipo →</a>
+        </article>
+
+        <article class="proto-card">
+          <span class="proto-badge">IMPECCABLE'S PICK</span>
+          <h2 class="proto-title">Campo di rilievo / Cantiere</h2>
+          <p class="proto-desc">Atterra nel cantiere: foto reale a tutta larghezza (tecnico con stazione totale Leica su pilastrino, Careggi sullo sfondo). Display strumento con coordinate live. Servizi = voci di libretto di campagna. Progetti = pagine di taccuino con schizzo + dati.</p>
+          <ul class="proto-features">
+            <li>Hero fotografico autentico (non stock), sovrapposto display strumento</li>
+            <li>CTA primario "Chiama", secondario "Scopri i servizi"</li>
+            <li>Servizi come schede tecniche: codice, descrizione, strumento, restituzioni</li>
+            <li>Progetti come entry di field book: schizzo SVG + metadata</li>
+            <li>Estetica "taccuino da campagna": carta, handwriting mono, alluminio</li>
+          </ul>
+          <a href="prototype-2-field-notebook/index.html" class="proto-btn secondary">Apri prototipo →</a>
+        </article>
+
+        <article class="proto-card">
+          <span class="proto-badge">CHALLENGER COMPETITIVE</span>
+          <h2 class="proto-title">Tensegrità topografica</h2>
+          <p class="proto-desc">Metafora strutturale: 5 aste nere (servizi) sospese da cordini arancioni (committenze). La topografia è rete di forze: capisaldi = compressione, linee di vista = tensione. Nodo cliccato = scheda servizio/progetto. Diagramma forze = navigazione.</p>
+          <ul class="proto-features">
+            <li>Canvas/WebGL: tensegrità 3D interattiva (aste + cavi)</li>
+            <li>Hover asta → cordini si accendono per committenza</li>
+            <li>Click nodo → event display tecnico (forze, quote, precisione)</li>
+            <li>Scroll = diagramma forze 2D → elenco progetti come nodi secondari</li>
+            <li>Team = "nodi fondanti", payoff in mono engineering</li>
+          </ul>
+          <a href="prototype-3-tensegrity/index.html" class="proto-btn secondary">Apri prototipo →</a>
+        </article>
+      </div>
+    </main>
+
+    <footer>
+      <p>Topografica S.r.l. — Prototipi code-first, static HTML/CSS/JS, zero dipendenze build.</p>
+      <p style="margin-top: var(--space-xs); font-family: var(--font-mono); font-size: 0.75rem;">Nessun form contatti · Nessun tracking · Nessun cookie non essenziale</p>
+    </footer>
+  </div>
+</body>
+</html>

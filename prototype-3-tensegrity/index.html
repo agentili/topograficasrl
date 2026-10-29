@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Topografica S.r.l. — Rilievi topografici per infrastrutture, territorio ed edifici. Prototipo: Tensegrità topografica.">
+  <title>Topografica — Tensegrità topografica</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Vai al contenuto principale</a>
+
+  <header class="site-header" role="banner">
+    <div class="header-content">
+      <div class="logo-group">
+        <svg class="logo-mark" viewBox="0 0 120 32" aria-hidden="true" focusable="false">
+          <text x="0" y="24" font-family="IBM Plex Sans, sans-serif" font-weight="700" font-size="24" fill="none">
+            <tspan class="logo-top" fill="#ff6b35">TOP</tspan><tspan class="logo-rest" fill="#e8eef2">OGRAFICA</tspan>
+          </text>
+        </svg>
+        <p class="payoff" aria-hidden="true">IL CARATTERE DEL TOPOGRAFO È LA FEDELTÀ AL DATO RILEVATO</p>
+      </div>
+      <nav class="header-actions" aria-label="Azioni principali">
+        <a href="tel:+390573534569" class="btn btn--primary" aria-label="Chiama Topografica al 0573 534569">
+          <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1.003 1.003 0 0 1 1.11-.24c1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57a1 1 0 0 1-.24 1.11l-2.2 2.2z"/></svg>
+          <span>Chiama 0573 534569</span>
+        </a>
+        <a href="mailto:info@topograficasrl.com" class="btn btn--secondary" aria-label="Invia email a Topografica">
+          <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          <span>Scrivi email</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" role="main">
+    <section class="hero hero--tensegrity" aria-labelledby="hero-title">
+      <div id="tensegrity-canvas" class="tensegrity-canvas" role="img" aria-label="Struttura tensegrità 3D interattiva: 5 aste nere (servizi) sospese da cordini arancioni (committenze). Hover su asta accende cordini corrispondenti." aria-live="polite"></div>
+
+      <div class="hero-content">
+        <h1 id="hero-title" class="hero-title">
+          La topografia è una rete di forze.
+        </h1>
+        <p class="hero-subtitle">
+          Capisaldi in compressione, linee di vista in tensione. Cinque servizi, nove committenze, una struttura che tiene insieme il territorio.
+        </p>
+        <div class="hero-cta-group">
+          <a href="#services" class="btn btn--primary btn--large">Entra nella rete</a>
+          <a href="#contact" class="btn btn--secondary btn--large">Contatti</a>
+        </div>
+      </div>
+
+      <aside id="force-panel" class="force-panel" role="complementary" aria-label="Dettaglio nodo selezionato" hidden>
+        <button type="button" class="force-panel-close" aria-label="Chiudi dettaglio nodo">&times;</button>
+        <div class="force-panel-content"></div>
+      </aside>
+
+      <div class="scroll-indicator" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+        <span>Scorri per il diagramma forze</span>
+      </div>
+    </section>
+
+    <section id="services" class="force-diagram-section" aria-labelledby="force-title">
+      <div class="section-header">
+        <h2 id="force-title" class="section-title">Diagramma forze — Servizi come nodi di compressione</h2>
+        <p class="section-desc">Ogni asta (servizio) è in compressione; i cordini (committenze) in tensione la tengono in equilibrio. Clicca un nodo per i dati tecnici.</p>
+      </div>
+      <div id="force-diagram-canvas" class="force-diagram-canvas" role="img" aria-label="Diagramma forze 2D: 5 nodi principali connessi a committenze, forze vettoriali visualizzate"></div>
+
+      <div class="force-legend" aria-label="Legenda servizi e committenze">
+        <div class="legend-group">
+          <h3 class="legend-title">Servizi (Compressione)</h3>
+          <ul class="legend-list">
+            <li data-node="catasto"><span class="legend-dot" style="--dot-color: #00d4aa;"></span>Topografia e Catasto</li>
+            <li data-node="monitoraggio"><span class="legend-dot" style="--dot-color: #0099ff;"></span>Monitoraggio Discariche, Cave e Dighe</li>
+            <li data-node="sottoservizi"><span class="legend-dot" style="--dot-color: #ff6b35;"></span>Rilievo Sottoservizi – Ispezione Ipogea</li>
+            <li data-node="architettonico"><span class="legend-dot" style="--dot-color: #b87aff;"></span>Rilievi Architettonici di Fabbricati</li>
+            <li data-node="cantieri"><span class="legend-dot" style="--dot-color: #e85d1a;"></span>Assistenza e Sicurezza Cantieri</li>
+          </ul>
+        </div>
+        <div class="legend-group">
+          <h3 class="legend-title">Committenze (Tensione)</h3>
+          <ul class="legend-list">
+            <li data-client="careggi">Careggi</li>
+            <li data-client="ex-breda">Giusti / Ex-Breda</li>
+            <li data-client="ss66">Provincia Pistoia (SS.66)</li>
+            <li data-client="legnorosso">CONI Pistoia</li>
+            <li data-client="frascari">Provincia Pistoia (Frascari)</li>
+            <li data-client="agip">Agip Petroli</li>
+            <li data-client="nuove-acque">Nuove Acque Arezzo</li>
+            <li data-client="riconfinamenti">Privati / PA</li>
+            <li data-client="sr66">Provincia Pistoia (SR.66)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="services-detail-section" aria-labelledby="services-detail-title">
+      <div class="section-header">
+        <h2 id="services-detail-title" class="section-title">Schede tecniche — Event display per nodo</h2>
+        <p class="section-desc">Dettaglio completo per ogni servizio: descrizione, strumentazione, restituzioni, progetti collegati.</p>
+      </div>
+      <dl class="services-grid" id="services-grid">
+        <!-- Populated by JS -->
+      </dl>
+    </section>
+
+    <section class="projects-section" aria-labelledby="projects-title">
+      <div class="section-header">
+        <h2 id="projects-title" class="section-title">Nodi secondari — Progetti come estensioni della rete</h2>
+        <p class="section-desc">Ogni progetto eredita le forze del servizio principale e le committenze che lo vincolano.</p>
+      </div>
+      <ul class="projects-grid" role="list" id="projects-grid">
+        <!-- Populated by JS -->
+      </ul>
+    </section>
+
+    <section class="team-section" aria-labelledby="team-title">
+      <div class="section-header">
+        <h2 id="team-title" class="section-title">Nodi fondanti — Il Team</h2>
+        <p class="section-desc">Tre nodi primari che generano la struttura. Senza di loro la rete collassa.</p>
+      </div>
+      <ul class="team-grid" role="list">
+        <li class="team-member">
+          <figure class="member-photo" aria-label="Giampiero Gori">
+            <div class="photo-placeholder" aria-hidden="true">GG</div>
+          </figure>
+          <div class="member-info">
+            <h3 class="member-name">Giampiero Gori</h3>
+            <p class="member-role">Nodo fondante — Topografo senior</p>
+            <p class="member-forces"><span class="force-tag">Catasto</span><span class="force-tag">Infrastrutture</span><span class="force-tag">Direzione</span></p>
+          </div>
+        </li>
+        <li class="team-member">
+          <figure class="member-photo" aria-label="Alberto Lucarelli">
+            <div class="photo-placeholder" aria-hidden="true">AL</div>
+          </figure>
+          <div class="member-info">
+            <h3 class="member-name">Alberto Lucarelli</h3>
+            <p class="member-role">Nodo fondante — Topografo senior</p>
+            <p class="member-forces"><span class="force-tag">Monitoraggio</span><span class="force-tag">Sottoservizi</span><span class="force-tag">Sicurezza</span></p>
+          </div>
+        </li>
+        <li class="team-member">
+          <figure class="member-photo" aria-label="Marco Biagini">
+            <div class="photo-placeholder" aria-hidden="true">MB</div>
+          </figure>
+          <div class="member-info">
+            <h3 class="member-name">Marco Biagini</h3>
+            <p class="member-role">Nodo fondante — Topografo senior</p>
+            <p class="member-forces"><span class="force-tag">Architettonico</span><span class="force-tag">Fotogrammetria</span><span class="force-tag">3D Modeling</span></p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="company-section" aria-labelledby="company-title">
+      <div class="section-header">
+        <h2 id="company-title" class="section-title">Struttura portante — Società</h2>
+      </div>
+      <div class="company-content">
+        <p class="company-motto">"IL CARATTERE DEL TOPOGRAFO È LA FEDELTÀ AL DATO RILEVATO"</p>
+        <p>La TOPOGRAFICA s.r.l. opera con esperienza ultradecennale nel campo della topografia estendendo il proprio campo d'azione a tutto il territorio nazionale ed internazionale. Fin dalle sue origini l'Azienda ha lavorato in Italia, Mozambico, Messico, Zaire, Senegal e Algeria occupandosi della rilevazione, progettazione e restituzione di tutto ciò che è inerente la topografia e le sue applicazioni.</p>
+        <p>L'esperienza maturata nel tempo ha fatto sì che la società evolvesse il proprio bagaglio culturale, tecnico e la propria struttura con supporti sempre più aggiornati alle esigenze del settore. Nell'espletamento di tali servizi la TOPOGRAFICA s.r.l. può partecipare sia come unico fornitore che come partner insieme a società, consorzi ed enti collettivi aventi oggetto affine o complementare al proprio.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section" aria-labelledby="contact-title">
+      <div class="section-header">
+        <h2 id="contact-title" class="section-title">Punti di ancoraggio — Contatti</h2>
+      </div>
+      <address class="contact-grid">
+        <div class="contact-item">
+          <h3>Sede</h3>
+          <p>Via Fonda di Sant'Agostino 4/F<br>51100 Pistoia (PT), Italia</p>
+        </div>
+        <div class="contact-item">
+          <h3>Telefono</h3>
+          <p><a href="tel:+390573534569">0573 534569</a></p>
+        </div>
+        <div class="contact-item">
+          <h3>Email</h3>
+          <p><a href="mailto:info@topograficasrl.com">info@topograficasrl.com</a></p>
+        </div>
+        <div class="contact-item">
+          <h3>Indicazioni</h3>
+          <p><a href="https://maps.google.com/?q=Via+Fonda+di+Sant'Agostino+4%2FF+Pistoia" target="_blank" rel="noopener">Apri in Google Maps</a></p>
+        </div>
+      </address>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <p>&copy; 2025 Topografica S.r.l. — Tutti i diritti riservati.</p>
+    <p class="footer-note">Prototipo: Tensegrità topografica — Nessun form contatti · Nessun tracking · Nessun cookie non essenziale.</p>
+  </footer>
+
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.164.1/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.164.1/examples/jsm/"
+    }
+  }
+  </script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

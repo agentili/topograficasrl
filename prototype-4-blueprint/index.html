@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Topografica S.r.l. — Rilievi topografici per infrastrutture, territorio ed edifici. Prototipo: Blueprint tecnico interattivo.">
+  <title>Topografica — Blueprint Tecnico</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <a href="#main" class="skip-link">Vai al contenuto principale</a>
+
+  <!-- Animated Blueprint Grid Background -->
+  <div class="blueprint-canvas" id="blueprint-bg" aria-hidden="true"></div>
+
+  <!-- Floating Geometric Elements -->
+  <div class="floating-elements" id="floating-elements" aria-hidden="true"></div>
+
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <div class="logo-group">
+        <svg class="logo-mark" viewBox="0 0 120 32" aria-hidden="true">
+          <text x="0" y="22" font-family="Inter, sans-serif" font-weight="700" font-size="22" fill="none" letter-spacing="0.02em">
+            <tspan class="logo-top" fill="#e85d1a">TOP</tspan><tspan class="logo-rest" fill="#0f172a">OGRAFICA</tspan>
+          </text>
+        </svg>
+        <span class="logo-divider" aria-hidden="true"></span>
+        <p class="payoff">IL CARATTERE DEL TOPOGRAFO È LA FEDELTÀ AL DATO RILEVATO</p>
+      </div>
+      <nav class="header-actions" aria-label="Azioni principali">
+        <a href="#contact" class="btn btn--ghost" data-scroll>Contatti</a>
+        <a href="tel:+390573534569" class="btn btn--primary" aria-label="Chiama 0573 534569">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span>0573 534569</span>
+        </a>
+      </nav>
+    </div>
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress" id="scroll-progress" aria-hidden="true"><span></span></div>
+  </header>
+
+  <main id="main" role="main">
+    <!-- HERO: Animated Technical Drawing -->
+    <section class="hero" id="hero" aria-labelledby="hero-title">
+      <div class="hero-bg-layers">
+        <div class="layer layer--back" data-depth="0.15"></div>
+        <div class="layer layer--mid" data-depth="0.08"></div>
+        <div class="layer layer--front" data-depth="0.03"></div>
+      </div>
+
+      <div class="hero-content">
+        <div class="hero-badge" data-scroll-reveal>
+          <span class="badge-dot" aria-hidden="true"></span>
+          <span>Blueprint Mode — Scroll to Explore</span>
+        </div>
+
+        <h1 id="hero-title" class="hero-title" data-scroll-reveal>
+          <span class="title-line">Rilievi topografici</span>
+          <span class="title-line title-accent">per infrastrutture,</span>
+          <span class="title-line">territorio ed edifici.</span>
+        </h1>
+
+        <p class="hero-subtitle" data-scroll-reveal>
+          Precisione sub-centimetrica. Strumentazione proprietaria. Team interno.
+          <span class="subtitle-divider" aria-hidden="true"></span>
+          9 progetti documentati. 35+ km di reti rilevate.
+        </p>
+
+        <div class="hero-metrics" data-scroll-reveal>
+          <div class="metric">
+            <span class="metric-value" data-count="35">0</span>
+            <span class="metric-suffix">+ km</span>
+            <span class="metric-label">Reti fognarie rilevate</span>
+          </div>
+          <div class="metric">
+            <span class="metric-value" data-count="27">0</span>
+            <span class="metric-suffix"> km</span>
+            <span class="metric-label">3ª cerchia Pistoia</span>
+          </div>
+          <div class="metric">
+            <span class="metric-value" data-count="9">0</span>
+            <span class="metric-suffix"></span>
+            <span class="metric-label">Progetti documentati</span>
+          </div>
+          <div class="metric">
+            <span class="metric-value" data-count="3">0</span>
+            <span class="metric-suffix"></span>
+            <span class="metric-label">Soci topografi senior</span>
+          </div>
+        </div>
+
+        <div class="hero-cta" data-scroll-reveal>
+          <a href="#services" class="btn btn--primary btn--large" data-scroll>Esplora i Servizi</a>
+          <a href="#projects" class="btn btn--outline btn--large" data-scroll>Vedi Progetti</a>
+        </div>
+
+        <div class="scroll-indicator" data-scroll-reveal>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+          <span>Scorri per iniziare il rilievo</span>
+        </div>
+      </div>
+
+      <!-- Technical Drawing Overlay -->
+      <div class="technical-overlay" id="technical-overlay" aria-hidden="true">
+        <svg class="overlay-svg" viewBox="0 0 800 600" preserveAspectRatio="none">
+          <defs>
+            <pattern id="grid-pattern" width="40" height="40" patternUnits="userSpaceOnUse">
+              <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(232,93,26,0.15)" stroke-width="0.5"/>
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#grid-pattern)"/>
+          <!-- Animated drawing paths -->
+          <g class="drawing-paths" stroke="rgba(232,93,26,0.4)" stroke-width="1.5" fill="none">
+            <path class="draw-path" d="M 100 400 L 250 200 L 400 200 L 550 400" stroke-dasharray="1000" stroke-dashoffset="1000"/>
+            <path class="draw-path" d="M 250 200 L 250 400" stroke-dasharray="500" stroke-dashoffset="500"/>
+            <path class="draw-path" d="M 400 200 L 400 400" stroke-dasharray="500" stroke-dashoffset="500"/>
+            <circle class="draw-path" cx="250" cy="200" r="8" stroke-dasharray="50" stroke-dashoffset="50"/>
+            <circle class="draw-path" cx="400" cy="200" r="8" stroke-dasharray="50" stroke-dashoffset="50"/>
+            <path class="draw-path" d="M 150 450 L 500 450" stroke-dasharray="800" stroke-dashoffset="800" stroke="rgba(0,212,170,0.3)"/>
+            <text x="325" y="470" font-family="Space Mono" font-size="10" fill="rgba(0,212,170,0.3)" text-anchor="middle">QUOTE ROSSE / NERE</text>
+          </g>
+        </svg>
+      </div>
+    </section>
+
+    <!-- SERVICES: Interactive Service Cards -->
+    <section id="services" class="services" aria-labelledby="services-title">
+      <div class="section-header" data-scroll-reveal>
+        <span class="section-tag">01</span>
+        <h2 id="services-title" class="section-title">Servizi di Rilievo</h2>
+        <p class="section-desc">Ogni servizio è un layer tecnico: strumentazione dedicata, precisione certificata, restituzioni standard.</p>
+      </div>
+
+      <div class="services-grid" id="services-grid">
+        <!-- Populated by JS -->
+      </div>
+
+      <!-- Service Detail Panel -->
+      <aside class="service-panel" id="service-panel" role="dialog" aria-labelledby="panel-title" hidden>
+        <button class="panel-close" aria-label="Chiudi dettaglio servizio">&times;</button>
+        <div class="panel-content"></div>
+      </aside>
+    </section>
+
+    <!-- PROJECTS: Parallax Project Showcase -->
+    <section id="projects" class="projects" aria-labelledby="projects-title">
+      <div class="section-header" data-scroll-reveal>
+        <span class="section-tag">02</span>
+        <h2 id="projects-title" class="section-title">Progetti Selezionati</h2>
+        <p class="section-desc">Casi reali con committenza nominativa. Ogni progetto rivela i layer del rilievo allo scroll.</p>
+      </div>
+
+      <div class="projects-container" id="projects-container">
+        <!-- Populated by JS -->
+      </div>
+    </section>
+
+    <!-- TEAM: Technical Profiles -->
+    <section id="team" class="team" aria-labelledby="team-title">
+      <div class="section-header" data-scroll-reveal>
+        <span class="section-tag">03</span>
+        <h2 id="team-title" class="section-title">Team Tecnico</h3>
+        <p class="section-desc">Tre nodi fondanti della rete Topografica. Competenze complementari su tutta la filiera del rilievo.</p>
+      </div>
+
+      <div class="team-grid" id="team-grid">
+        <!-- Populated by JS -->
+      </div>
+    </section>
+
+    <!-- COMPANY: Technical Specification -->
+    <section id="company" class="company" aria-labelledby="company-title">
+      <div class="section-header" data-scroll-reveal>
+        <span class="section-tag">04</span>
+        <h2 id="company-title" class="section-title">Specifiche Società</h2>
+        <p class="section-desc">Dati tecnici e operativi. Nessun claim di marketing.</p>
+      </div>
+
+      <div class="spec-sheet" data-scroll-reveal>
+        <dl class="spec-grid">
+          <div><dt>Ragione Sociale</dt><dd>TOPOGRAFICA S.r.l.</dd></div>
+          <div><dt>Esperienza</dt><dd>Ultradecennale — territorio nazionale e internazionale</dd></div>
+          <div><dt>Sede Operativa</dt><dd>Via Fonda di Sant'Agostino 4/F, 51100 Pistoia (PT)</dd></div>
+          <div><dt>Contatto Diretto</dt><dd>0573 534569 / info@topograficasrl.com</dd></div>
+          <div><dt>Strumentazione Proprietaria</dt><dd>Stazioni totali Leica TSA15, TCA2003 motorizzate; GNSS multi-costellazione; Livelli precisione Invar; Attrezzatura radiocomandata ipogea; Laser scanner (partner)</dd></div>
+          <div><dt>Certificazioni</dt><dd>Soci abilitati D.Lgs 81/08; Redazione POS e Piani Sicurezza; Supporto L. 818/84 prevenzione incendi</dd></div>
+          <div><dt>Committenze Principali</dt><dd>Nuove Acque S.p.A., Provincia di Pistoia, CONI Pistoia, Agip Petroli S.p.A., Giusti per l'Edilizia S.p.A., Azienda Ospedaliero-Universitaria Careggi, Hydrocek srl, Hyper srl</dd></div>
+          <div><dt>Estensioni Rilevate</dt><dd>35 km rete fognaria area fiorentina; 27 km 3ª cerchia muraria Pistoia; Tracciati oleodotto Gaeta-Pomezia; Varianti SS.66/SR.66</dd></div>
+          <div><dt>Restituzioni Standard</dt><dd>DWG/DXF, XML Catasto, Excel, GIS, Nuvole punti (.las/.e57), Modelli 3D, Rendering, Relazioni tecniche</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- CONTACT: Direct Access -->
+    <section id="contact" class="contact" aria-labelledby="contact-title">
+      <div class="section-header" data-scroll-reveal>
+        <span class="section-tag">05</span>
+        <h2 id="contact-title" class="section-title">Contatto Diretto</h2>
+        <p class="section-desc">Nessun modulo. Nessun intermediario. Chiamate o scrivete direttamente ai tecnici.</p>
+      </div>
+
+      <div class="contact-grid" data-scroll-reveal>
+        <a href="tel:+390573534569" class="contact-card contact-card--primary">
+          <div class="contact-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div class="contact-info">
+            <h3>Chiamare Ora</h3>
+            <p class="contact-value">0573 534569</p>
+            <p class="contact-hint">Risponde il tecnico di turno</p>
+          </div>
+          <span class="contact-arrow" aria-hidden="true">→</span>
+        </a>
+
+        <a href="mailto:info@topograficasrl.com" class="contact-card">
+          <div class="contact-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          </div>
+          <div class="contact-info">
+            <h3>Inviare Email</h3>
+            <p class="contact-value">info@topograficasrl.com</p>
+            <p class="contact-hint">Risposta entro 4 ore lavorative</p>
+          </div>
+          <span class="contact-arrow" aria-hidden="true">→</span>
+        </a>
+
+        <a href="https://maps.google.com/?q=Via+Fonda+di+Sant'Agostino+4%2FF+Pistoia" target="_blank" rel="noopener" class="contact-card">
+          <div class="contact-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div class="contact-info">
+            <h3>Raggiungere la Sede</h3>
+            <p class="contact-value">Via Fonda di Sant'Agostino 4/F</p>
+            <p class="contact-hint">51100 Pistoia (PT), Italia</p>
+          </div>
+          <span class="contact-arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <svg class="logo-mark" viewBox="0 0 120 32" aria-hidden="true">
+          <text x="0" y="22" font-family="Inter, sans-serif" font-weight="700" font-size="22" fill="none">
+            <tspan class="logo-top" fill="#e85d1a">TOP</tspan><tspan class="logo-rest" fill="#e8eef2">OGRAFICA</tspan>
+          </text>
+        </svg>
+        <p class="payoff">IL CARATTERE DEL TOPOGRAFO È LA FEDELTÀ AL DATO RILEVATO</p>
+      </div>
+      <div class="footer-links">
+        <a href="#services" data-scroll>Servizi</a>
+        <a href="#projects" data-scroll>Progetti</a>
+        <a href="#team" data-scroll>Team</a>
+        <a href="#company" data-scroll>Società</a>
+        <a href="#contact" data-scroll>Contatti</a>
+      </div>
+      <div class="footer-legal">
+        <p>&copy; 2025 Topografica S.r.l. — Tutti i diritti riservati.</p>
+        <p class="footer-note">Prototipo: Blueprint Tecnico — Zero form · Zero tracking · Zero cookie non essenziali</p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

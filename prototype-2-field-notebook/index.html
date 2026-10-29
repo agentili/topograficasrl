@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Topografica S.r.l. — Rilievi topografici per infrastrutture, territorio ed edifici. Prototipo: Campo di rilievo / Cantiere.">
+  <title>Topografica — Campo di rilievo / Cantiere</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Vai al contenuto principale</a>
+
+  <header class="site-header" role="banner">
+    <div class="header-content">
+      <div class="logo-group">
+        <svg class="logo-mark" viewBox="0 0 120 32" aria-hidden="true" focusable="false">
+          <text x="0" y="24" font-family="IBM Plex Sans, sans-serif" font-weight="700" font-size="24" fill="none">
+            <tspan class="logo-top" fill="#ff6b35">TOP</tspan><tspan class="logo-rest" fill="#e8eef2">OGRAFICA</tspan>
+          </text>
+        </svg>
+        <p class="payoff" aria-hidden="true">IL CARATTERE DEL TOPOGRAFO È LA FEDELTÀ AL DATO RILEVATO</p>
+      </div>
+      <nav class="header-actions" aria-label="Azioni principali">
+        <a href="tel:+390573534569" class="btn btn--primary" aria-label="Chiama Topografica al 0573 534569">
+          <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1.003 1.003 0 0 1 1.11-.24c1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57a1 1 0 0 1-.24 1.11l-2.2 2.2z"/></svg>
+          <span>Chiama 0573 534569</span>
+        </a>
+        <a href="mailto:info@topograficasrl.com" class="btn btn--secondary" aria-label="Invia email a Topografica">
+          <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          <span>Scrivi email</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" role="main">
+    <section class="hero hero--field" aria-labelledby="hero-title">
+      <div class="hero-bg" role="img" aria-label="Cantiere Careggi: tecnico con stazione totale Leica TSA15 su pilastrino, sfondo ospedale"></div>
+      <div class="hero-overlay" aria-hidden="true"></div>
+
+      <div class="instrument-display" role="img" aria-label="Display stazione totale: codice punto 1042, E 1642312.45 N 4837215.89 H 62.34" aria-live="polite">
+        <div class="display-header">
+          <span class="display-model">Leica TSA15</span>
+          <span class="display-status">● TRACKING</span>
+        </div>
+        <dl class="display-coords">
+          <div><dt>PT</dt><dd id="coord-pt">1042</dd></div>
+          <div><dt>E</dt><dd id="coord-e">1642312.45</dd></div>
+          <div><dt>N</dt><dd id="coord-n">4837215.89</dd></div>
+          <div><dt>H</dt><dd id="coord-h">62.34</dd></div>
+        </dl>
+        <div class="display-footer">
+          <span>HT: 1.650</span>
+          <span>HR: 1.500</span>
+        </div>
+      </div>
+
+      <div class="hero-content">
+        <h1 id="hero-title" class="hero-title">
+          Rilievi topografici per infrastrutture, territorio ed edifici.
+        </h1>
+        <p class="hero-subtitle">
+          Topografia, catasto, monitoraggi e rilievi specialistici a supporto di cantieri, reti e progetti edilizi.
+        </p>
+        <div class="hero-cta-group">
+          <a href="#services" class="btn btn--primary btn--large">Scopri i servizi</a>
+          <a href="#contact" class="btn btn--secondary btn--large">Contatti</a>
+        </div>
+      </div>
+
+      <div class="scroll-indicator" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+        <span>Scorri per il libretto di campagna</span>
+      </div>
+    </section>
+
+    <section id="services" class="services-section" aria-labelledby="services-title">
+      <div class="section-header">
+        <h2 id="services-title" class="section-title">Libretto di campagna — Servizi</h2>
+        <p class="section-desc">Ogni voce è un tipo di rilievo con codice, strumentazione dedicata e restituzioni tecniche.</p>
+      </div>
+      <dl class="field-book">
+        <div class="field-entry" data-service="catasto">
+          <dt class="entry-header">
+            <span class="entry-code">TP-01</span>
+            <span class="entry-name">Topografia e Catasto</span>
+          </dt>
+          <dd class="entry-body">
+            <div class="entry-desc">Rilievi planimetrici, planoaltimetrici, catastali; livellazioni alta precisione (stadie normali e Invar); rilevazioni subalveo; controllo confini; elaborazione tempo reale.</div>
+            <div class="entry-specs">
+              <dl class="specs-grid">
+                <div><dt>Strumentazione</dt><dd>Stazioni totali Leica TSA15, TCA2003; GNSS multi-costellazione; livelli precisione</dd></div>
+                <div><dt>Restituzioni</dt><dd>DWG/DXF, XML Catasto, Excel, relazioni tecniche</dd></div>
+                <div><dt>Precisione</dt><dd>Planimetrica ±3 mm, Altimetrica ±2 mm (livellazione Invar)</dd></div>
+                <div><dt>Normativa</dt><dd>D.Lgs 81/08, normative catastali, specifiche committenza</dd></div>
+              </dl>
+            </div>
+            <div class="entry-projects">
+              <span class="projects-label">Progetti:</span>
+              <a href="#project-careggi" class="project-ref">Careggi</a>
+              <a href="#project-nuove-acque" class="project-ref">Nuove Acque</a>
+              <a href="#project-riconfinamenti" class="project-ref">Riconfinamenti</a>
+            </div>
+          </dd>
+        </div>
+
+        <div class="field-entry" data-service="monitoraggio">
+          <dt class="entry-header">
+            <span class="entry-code">MN-02</span>
+            <span class="entry-name">Monitoraggio Discariche, Cave e Dighe</span>
+          </dt>
+          <dd class="entry-body">
+            <div class="entry-desc">Stazioni totali motorizzate (Leica TSA15, TCA2003) con telemetria GSM; cicli periodici, giornalieri o continui; marker su capisaldi fissi; grafici spostamenti e velocità.</div>
+            <div class="entry-specs">
+              <dl class="specs-grid">
+                <div><dt>Strumentazione</dt><dd>Stazioni totali motorizzate Leica, sistema GSM, pilastrini CLS, marker precisione</dd></div>
+                <div><dt>Restituzioni</dt><dd>File AutoCAD, Excel, grafici spostamento planimetrico/altimetrico, report velocità</dd></div>
+                <div><dt>Frequenza</dt><dd>Periodica, giornaliera, continua con messa in sicurezza stazione</dd></div>
+                <div><dt>Referenza</dt><dd>Capisaldi fissi creati o presenti in zona</dd></div>
+              </dl>
+            </div>
+            <div class="entry-projects">
+              <span class="projects-label">Progetti:</span>
+              <a href="#project-careggi" class="project-ref">Careggi</a>
+              <a href="#project-frascari" class="project-ref">Frascari</a>
+            </div>
+          </dd>
+        </div>
+
+        <div class="field-entry" data-service="sottoservizi">
+          <dt class="entry-header">
+            <span class="entry-code">SS-03</span>
+            <span class="entry-name">Rilievo Sottoservizi – Ispezione Ipogea</span>
+          </dt>
+          <dd class="entry-body">
+            <div class="entry-desc">Reti fognarie/acquedotto: rilievo superficiale + prospezioni ipogee/subacquee; georeferenziazione IGM; precisione sub-centimetrica; 35 km area fiorentina, 27 km 3ª cerchia Pistoia.</div>
+            <div class="entry-specs">
+              <dl class="specs-grid">
+                <div><dt>Strumentazione</dt><dd>Attrezzatura radiocomandata, TPS/GPS/Livello integrati, georeferenziazione IGM</dd></div>
+                <div><dt>Restituzioni</dt><dd>Banche dati reti (dimensione, profondità, stato), DWG, GIS</dd></div>
+                <div><dt>Estensione</dt><dd>35 km rete fognaria fiorentina, 27 km 3ª cerchia Pistoia</dd></div>
+                <div><dt>Normativa</dt><dd>D.Lgs 81/2008 per attrezzature e accesso spazi confinati</dd></div>
+              </dl>
+            </div>
+            <div class="entry-projects">
+              <span class="projects-label">Progetti:</span>
+              <a href="#project-ex-breda" class="project-ref">Ex-Breda</a>
+              <a href="#project-agip" class="project-ref">Agip</a>
+            </div>
+          </dd>
+        </div>
+
+        <div class="field-entry" data-service="architettonico">
+          <dt class="entry-header">
+            <span class="entry-code">AR-04</span>
+            <span class="entry-name">Rilievi Architettonici di Fabbricati</span>
+          </dt>
+          <dd class="entry-body">
+            <div class="entry-desc">Stazione totale 3D + fotogrammetria referenziata; laser scanner via partner per nuvole dense; modelli 3D interrogabili (x,y,z per punto); piante, prospetti, sezioni, rendering.</div>
+            <div class="entry-specs">
+              <dl class="specs-grid">
+                <div><dt>Strumentazione</dt><dd>Stazione totale 3D, fotogrammetria, laser scanner (partner), software nuvole punti</dd></div>
+                <div><dt>Restituzioni</dt><dd>Nuvole punti (.las/.e57), modelli 3D, DWG piante/prospetti/sezioni, rendering</dd></div>
+                <div><dt>Tecnologie</dt><dd>Integrazione stazione totale + fotogrammetria + laser scanner</dd></div>
+                <div><dt>Output</dt><dd>Modelli digitali tridimensionali realistici e interrogabili</dd></div>
+              </dl>
+            </div>
+            <div class="entry-projects">
+              <span class="projects-label">Progetti:</span>
+              <a href="#project-legnorosso" class="project-ref">Legnorosso</a>
+              <a href="#project-frascari" class="project-ref">Frascari</a>
+            </div>
+          </dd>
+        </div>
+
+        <div class="field-entry" data-service="cantieri">
+          <dt class="entry-header">
+            <span class="entry-code">CT-05</span>
+            <span class="entry-name">Assistenza e Sicurezza Cantieri</span>
+          </dt>
+          <dd class="entry-body">
+            <div class="entry-desc">Tracciamenti viabilità, aggiornamento plano-altimetrici, quote "rosse" da rilievo "nero"; redazione POS e piani sicurezza D.Lgs 81/08; supporto L. 818/84 prevenzione incendi.</div>
+            <div class="entry-specs">
+              <dl class="specs-grid">
+                <div><dt>Competenze</dt><dd>Soci abilitati D.Lgs 81/08, redazione POS, piani intervento sicurezza</dd></div>
+                <div><dt>Restituzioni</dt><dd>POS, piani sicurezza, elaborati antincendio, tracciamenti esecutivi</dd></div>
+                <div><dt>Formazione</dt><dd>Supporto collaboratori per esecuzione rilievi in qualsiasi ambiente</dd></div>
+                <div><dt>Normativa</dt><dd>D.Lgs 81/08, L. 818/84 prevenzione incendi</dd></div>
+              </dl>
+            </div>
+            <div class="entry-projects">
+              <span class="projects-label">Progetti:</span>
+              <a href="#project-ss66" class="project-ref">SS.66</a>
+              <a href="#project-sr66" class="project-ref">SR.66</a>
+            </div>
+          </dd>
+        </div>
+      </dl>
+    </section>
+
+    <section id="projects" class="projects-section" aria-labelledby="projects-title">
+      <div class="section-header">
+        <h2 id="projects-title" class="section-title">Pagine di taccuino — Progetti selezionati</h2>
+        <p class="section-desc">Casi reali come entry di field book: schizzo quotato + metadata tecnici. Clicca per espandere.</p>
+      </div>
+      <ul class="field-book-projects" role="list">
+        <li class="field-project" id="project-careggi">
+          <header class="project-header">
+            <div class="project-sketch" aria-label="Schizzo quotato Pad. Maternità Careggi">
+              <svg viewBox="0 0 400 200" class="sketch-svg">
+                <rect x="10" y="10" width="380" height="180" fill="none" stroke="#c8d4dc" stroke-width="0.5" stroke-dasharray="4,4"/>
+                <polygon points="50,150 150,50 250,50 350,150" fill="none" stroke="#ff6b35" stroke-width="2"/>
+                <line x1="50" y1="150" x2="350" y2="150" stroke="#00d4aa" stroke-width="1.5"/>
+                <text x="200" y="40" text-anchor="middle" font-family="IBM Plex Mono" font-size="10" fill="#c8d4dc">QUOTE ROSSE / NERE</text>
+                <text x="200" y="170" text-anchor="middle" font-family="IBM Plex Mono" font-size="9" fill="#6b7c8a">PIANO VIABILITÀ INTERNA</text>
+              </svg>
+            </div>
+            <div class="project-meta-header">
+              <h3 class="project-name">Manutenzione straordinaria Pad. Maternità — Osp. Careggi</h3>
+              <span class="project-category">Edilizia · Firenze</span>
+            </div>
+          </header>
+          <dl class="project-meta">
+            <div><dt>Committente</dt><dd>Azienda Ospedaliero-Universitaria Careggi</dd></div>
+            <div><dt>Servizi</dt><dd>Topografia cantiere, tracciamenti, quote rosse/nerie, aggiornamento plano-altimetrici</dd></div>
+            <div><dt>Strumentazione</dt><dd>Stazione totale, GPS, livellazione precisione</dd></div>
+          </dl>
+          <button type="button" class="project-expand" aria-expanded="false" aria-controls="details-careggi">Dettagli</button>
+          <div id="details-careggi" class="project-details" hidden>
+            <p>Rilievi topografici per posizionamento fabbricati e viabilità interna; calcolo e rappresentazione quote "rosse" derivate da rilievo "nero"; aggiornamento continuo piante, profili, sezioni durante avanzamento lavori.</p>
+          </div>
+        </li>
+
+        <li class="field-project" id="project-ex-breda">
+          <header class="project-header">
+            <div class="project-sketch" aria-label="Schizzo quotato Area Ex-Breda">
+              <svg viewBox="0 0 400 200" class="sketch-svg">
+                <rect x="10" y="10" width="380" height="180" fill="none" stroke="#c8d4dc" stroke-width="0.5" stroke-dasharray="4,4"/>
+                <rect x="60" y="60" width="120" height="80" fill="none" stroke="#b87aff" stroke-width="2"/>
+                <rect x="220" y="60" width="120" height="80" fill="none" stroke="#b87aff" stroke-width="2"/>
+                <line x1="60" y1="100" x2="340" y2="100" stroke="#0099ff" stroke-width="1" stroke-dasharray="3,3"/>
+                <text x="200" y="40" text-anchor="middle" font-family="IBM Plex Mono" font-size="10" fill="#c8d4dc">LASER SCANNER + STAZIONE TOTALE</text>
+                <text x="200" y="170" text-anchor="middle" font-family="IBM Plex Mono" font-size="9" fill="#6b7c8a">AREA EX INDUSTRIALE · GEOREF. IGM</text>
+              </svg>
+            </div>
+            <div class="project-meta-header">
+              <h3 class="project-name">Rilievo Area "Ex-Breda"</h3>
+              <span class="project-category">Infrastrutture · Pistoia</span>
+            </div>
+          </header>
+          <dl class="project-meta">
+            <div><dt>Committente</dt><dd>Giusti per l'Edilizia S.p.A.</dd></div>
+            <div><dt>Servizi</dt><dd>Rilievo topografico area industriale dismessa, riconfinamenti, catasto</dd></div>
+            <div><dt>Strumentazione</dt><dd>Stazione totale, GPS, laser scanner (partner)</dd></div>
+          </dl>
+          <button type="button" class="project-expand" aria-expanded="false" aria-controls="details-exbreda">Dettagli</button>
+          <div id="details-exbreda" class="project-details" hidden>
+            <p>Rilievo integrato stazione totale + laser scanner per modellazione 3D area ex industriale; supporto a pianificazione riconversione urbanistica; georeferenziazione IGM.</p>
+          </div>
+        </li>
+
+        <li class="field-project" id="project-ss66">
+          <header class="project-header">
+            <div class="project-sketch" aria-label="Schizzo quotato Variante SS.66">
+              <svg viewBox="0 0 400 200" class="sketch-svg">
+                <rect x="10" y="10" width="380" height="180" fill="none" stroke="#c8d4dc" stroke-width="0.5" stroke-dasharray="4,4"/>
+                <path d="M40,160 Q120,80 200,100 Q280,120 360,80" fill="none" stroke="#ff6b35" stroke-width="2.5"/>
+                <circle cx="120" cy="130" r="4" fill="#00d4aa"/>
+                <circle cx="200" cy="110" r="4" fill="#00d4aa"/>
+                <circle cx="280" cy="125" r="4" fill="#00d4aa"/>
+                <text x="200" y="40" text-anchor="middle" font-family="IBM Plex Mono" font-size="10" fill="#c8d4dc">TRACCIAMENTO VARIANTE STRADALE</text>
+                <text x="200" y="170" text-anchor="middle" font-family="IBM Plex Mono" font-size="9" fill="#6b7c8a">PILASTRI CAPOSALDI · QUOTE ROSSE GETTI</text>
+              </svg>
+            </div>
+            <div class="project-meta-header">
+              <h3 class="project-name">Tracciamento Variante SS.66</h3>
+              <span class="project-category">Infrastrutture · Pistoia</span>
+            </div>
+          </header>
+          <dl class="project-meta">
+            <div><dt>Committente</dt><dd>Provincia di Pistoia</dd></div>
+            <div><dt>Servizi</dt><dd>Tracciamento variante stradale, aggiornamento planimetrie/profili/sezioni</dd></div>
+            <div><dt>Strumentazione</dt><dd>Stazione totale motorizzata, GPS, livellazione</dd></div>
+          </dl>
+          <button type="button" class="project-expand" aria-expanded="false" aria-controls="details-ss66">Dettagli</button>
+          <div id="details-ss66" class="project-details" hidden>
+            <p>Tracciamento esecutivo nuova viabilità; fornitura quote rosse per controllo getti; aggiornamento continuo elaborati per direzione lavori; coordinamento con impresa esecutrice.</p>
+          </div>
+        </li>
+
+        <li class="field-project" id="project-legnorosso">
+          <header class="project-header">
+            <div class="project-sketch" aria-label="Schizzo quotato Impianto Legnorosso">
+              <svg viewBox="0 0 400 200" class="sketch-svg">
+                <rect x="10" y="10" width="380" height="180" fill="none" stroke="#c8d4dc" stroke-width="0.5" stroke-dasharray="4,4"/>
+                <ellipse cx="200" cy="100" rx="100" ry="50" fill="none" stroke="#b87aff" stroke-width="2"/>
+                <ellipse cx="200" cy="100" rx="80" ry="35" fill="none" stroke="#0099ff" stroke-width="1" stroke-dasharray="3,3"/>
+                <line x1="100" y1="100" x2="300" y2="100" stroke="#c8d4dc" stroke-width="0.5"/>
+                <text x="200" y="40" text-anchor="middle" font-family="IBM Plex Mono" font-size="10" fill="#c8d4dc">RILIEVO ARCHITETTONICO 3D + FOTOGRAMMETRIA</text>
+                <text x="200" y="170" text-anchor="middle" font-family="IBM Plex Mono" font-size="9" fill="#6b7c8a">IMPIANTO SPORTIVO · CONI PISTOIA</text>
+              </svg>
+            </div>
+            <div class="project-meta-header">
+              <h3 class="project-name">Ristrutturazione Impianto "Legnorosso"</h3>
+              <span class="project-category">Edilizia · Pistoia</span>
+            </div>
+          </header>
+          <dl class="project-meta">
+            <div><dt>Committente</dt><dd>CONI Comitato Provinciale Pistoia</dd></div>
+            <div><dt>Servizi</dt><dd>Rilievo architettonico esistente, tracciamento nuovo impianto, assistenza cantiere</dd></div>
+            <div><dt>Strumentazione</dt><dd>Stazione totale 3D, fotogrammetria, GPS</dd></div>
+          </dl>
+          <button type="button" class="project-expand" aria-expanded="false" aria-controls="details-legnorosso">Dettagli</button>
+          <div id="details-legnorosso" class="project-details" hidden>
+            <p>Rilievo architettonico impianto sportivo esistente (piante, prospetti, sezioni); tracciamento nuova struttura; assistenza topografica continua durante lavori; redazione POS sicurezza.</p>
+          </div>
+        </li>
+
+        <li class="field-project" id="project-frascari">
+          <header class="project-header">
+            <div class="project-sketch" aria-label="Schizzo quotato Impianto Frascari">
+              <svg viewBox="0 0 400 200" class="sketch-svg">
+                <rect x="10" y="10" width="380" height="180" fill="none" stroke="#c8d4dc" stroke-width="0.5" stroke-dasharray="4,4"/>
+                <rect x="80" y="60" width="240" height="80" fill="none" stroke="#b87aff" stroke-width="2"/>
+                <line x1="80" y1="100" x2="320" y2="100" stroke="#0099ff" stroke-width="1.5"/>
+                <line x1="80" y1="80" x2="80" y2="120" stroke="#0099ff" stroke-width="1.5"/>
+                <line x1="320" y1="80" x2="320" y2="120" stroke="#0099ff" stroke-width="1.5"/>
+                <text x="200" y="40" text-anchor="middle" font-family="IBM Plex Mono" font-size="10" fill="#c8d4dc">MONITORAGGIO STRUTTURALE + RILIEVO ARCHITETTONICO</text>
+                <text x="200" y="170" text-anchor="middle" font-family="IBM Plex Mono" font-size="9" fill="#6b7c8a">LIVELLAZIONI ALTA PRECISIONE · CEDIMENTI</text>
+              </svg>
+            </div>
+            <div class="project-meta-header">
+              <h3 class="project-name">Ristrutturazione Impianto "Frascari"</h3>
+              <span class="project-category">Edilizia · Pistoia</span>
+            </div>
+          </header>
+          <dl class="project-meta">
+            <div><dt>Committente</dt><dd>Provincia di Pistoia</dd></div>
+            <div><dt>Servizi</dt><dd>Rilievo architettonico, tracciamento, monitoraggio strutturale</dd></div>
+            <div><dt>Strumentazione</dt><dd>Stazione totale, livellazione precisione, GPS</dd></div>
+          </dl>
+          <button type="button" class="project-expand" aria-expanded="false" aria-controls="details-frascari">Dettagli</button>
+          <div id="details-frascari" class="project-details" hidden>
+            <p>Rilievo completo impianto sportivo; monitoraggio deformazioni strutturali durante ristrutturazione; livellazioni alta precisione per controllo cedimenti; georeferenziazione catastale.</p>
+          </div>
+        </li>
+
+        <li class="field-project" id="project-agip">
+          <header class="project-header">
+            <div class="project-sketch" aria-label="Schizzo quotato Oleodotto Gaeta-Pomezia">
+              <svg viewBox="0 0 400 200" class="sketch-svg">
+                <rect x="10" y="10" width="380" height="180" fill="none" stroke="#c8d4dc" stroke-width="0.5" stroke-dasharray="4,4"/>
+                <path d="M30,100 Q100,160 200,120 Q300,80 370,100" fill="none" stroke="#ff6b35" stroke-width="2"/>
+                <circle cx="100" cy="160" r="5" fill="#00d4aa"/>
+                <circle cx="200" cy="120" r="5" fill="#00d4aa"/>
+                <circle cx="300" cy="80" r="5" fill="#00d4aa"/>
+                <text x="200" y="40" text-anchor="middle" font-family="IBM Plex Mono" font-size="10" fill="#c8d4dc">AGGIORNAMENTO CATASTALE OLEODOTTO</text>
+                <text x="200" y="170" text-anchor="middle" font-family="IBM Plex Mono" font-size="9" fill="#6b7c8a">SERVITÙ · ESPROPRI · TIPI FRAZIONAMENTO</text>
+              </svg>
+            </div>
+            <div class="project-meta-header">
+              <h3 class="project-name">Aggiornamenti Catastali Oleodotto Gaeta-Pomezia</h3>
+              <span class="project-category">Catasto · Lazio</span>
+            </div>
+          </header>
+          <dl class="project-meta">
+            <div><dt>Committente</dt><dd>Agip Petroli S.p.A.</dd></div>
+            <div><dt>Servizi</dt><dd>Aggiornamenti catastali tracciato oleodotto, servitù, espropri</dd></div>
+            <div><dt>Strumentazione</dt><dd>GPS, stazione totale, software catasto</dd></div>
+          </dl>
+          <button type="button" class="project-expand" aria-expanded="false" aria-controls="details-agip">Dettagli</button>
+          <div id="details-agip" class="project-details" hidden>
+            <p>Aggiornamento mappali catastali per tracciato oleodotto Gaeta-Pomezia; rilevazione servitù ed espropri; redazione tipi di frazionamento e mappe di aggiornamento per Agenzia delle Entrate.</p>
+          </div>
+        </li>
+
+        <li class="field-project" id="project-nuove-acque">
+          <header class="project-header">
+            <div class="project-sketch" aria-label="Schizzo quotato Nuove Acque Arezzo">
+              <svg viewBox="0 0 400 200" class="sketch-svg">
+                <rect x="10" y="10" width="380" height="180" fill="none" stroke="#c8d4dc" stroke-width="0.5" stroke-dasharray="4,4"/>
+                <path d="M50,150 L150,50 L250,50 L350,150" fill="none" stroke="#00d4aa" stroke-width="2"/>
+                <line x1="100" y1="100" x2="300" y2="100" stroke="#00d4aa" stroke-width="1" stroke-dasharray="4,4"/>
+                <circle cx="150" cy="50" r="4" fill="#ff6b35"/>
+                <circle cx="250" cy="50" r="4" fill="#ff6b35"/>
+                <text x="200" y="40" text-anchor="middle" font-family="IBM Plex Mono" font-size="10" fill="#c8d4dc">PIANI PARTICELLARI · SERVITÙ · ESPROPRI</text>
+                <text x="200" y="170" text-anchor="middle" font-family="IBM Plex Mono" font-size="9" fill="#6b7c8a">INFRASTRUTTURE IDRICHE · AREZZO</text>
+              </svg>
+            </div>
+            <div class="project-meta-header">
+              <h3 class="project-name">Piani Particellari, Servitù ed Espropri</h3>
+              <span class="project-category">Catasto · Arezzo</span>
+            </div>
+          </header>
+          <dl class="project-meta">
+            <div><dt>Committente</dt><dd>Nuove Acque S.p.A.</dd></div>
+            <div><dt>Servizi</dt><dd>Piani particellari, servitù, espropri per infrastrutture idriche</dd></div>
+            <div><dt>Strumentazione</dt><dd>GPS RTK, stazione totale, software catasto</dd></div>
+          </dl>
+          <button type="button" class="project-expand" aria-expanded="false" aria-controls="details-nuoveacque">Dettagli</button>
+          <div id="details-nuoveacque" class="project-details" hidden>
+            <p>Redazione piani particellari per acquisizioni aree; calcolo servitù passaggio condotte; tipi di frazionamento per espropri; coordinamento con uffici catastali Arezzo.</p>
+          </div>
+        </li>
+
+        <li class="field-project" id="project-riconfinamenti">
+          <header class="project-header">
+            <div class="project-sketch" aria-label="Schizzo quotato Riconfinamenti">
+              <svg viewBox="0 0 400 200" class="sketch-svg">
+                <rect x="10" y="10" width="380" height="180" fill="none" stroke="#c8d4dc" stroke-width="0.5" stroke-dasharray="4,4"/>
+                <polygon points="100,140 180,60 300,60 380,140" fill="none" stroke="#00d4aa" stroke-width="1.5"/>
+                <line x1="100" y1="140" x2="180" y2="60" stroke="#ff6b35" stroke-width="2" stroke-dasharray="5,5"/>
+                <line x1="300" y1="60" x2="380" y2="140" stroke="#ff6b35" stroke-width="2" stroke-dasharray="5,5"/>
+                <text x="200" y="40" text-anchor="middle" font-family="IBM Plex Mono" font-size="10" fill="#c8d4dc">RICONFINAMENTO · VERIFICA CONFINI</text>
+                <text x="200" y="170" text-anchor="middle" font-family="IBM Plex Mono" font-size="9" fill="#6b7c8a">CATASTO VS STATO DI FATTO · VERBALI</text>
+              </svg>
+            </div>
+            <div class="project-meta-header">
+              <h3 class="project-name">Riconfinamenti Terreni</h3>
+              <span class="project-category">Catasto · Nazionale</span>
+            </div>
+          </header>
+          <dl class="project-meta">
+            <div><dt>Committente</dt><dd>Privati e Pubbliche Amministrazioni</dd></div>
+            <div><dt>Servizi</dt><dd>Esecuzione e assistenza riconfinamenti, verifica confini proprietà</dd></div>
+            <div><dt>Strumentazione</dt><dd>GPS RTK, stazione totale, livellazione</dd></div>
+          </dl>
+          <button type="button" class="project-expand" aria-expanded="false" aria-controls="details-riconfinamenti">Dettagli</button>
+          <div id="details-riconfinamenti" class="project-details" hidden>
+            <p>Riconfinamenti terreni per privati e pubbliche amministrazioni; verifica confronto dati catastali vs stato di fatto; redazione verbali di riconfinamento; assistenza in contenziosi confinari.</p>
+          </div>
+        </li>
+
+        <li class="field-project" id="project-sr66">
+          <header class="project-header">
+            <div class="project-sketch" aria-label="Schizzo quotato Variante SR.66">
+              <svg viewBox="0 0 400 200" class="sketch-svg">
+                <rect x="10" y="10" width="380" height="180" fill="none" stroke="#c8d4dc" stroke-width="0.5" stroke-dasharray="4,4"/>
+                <path d="M30,150 Q100,80 200,100 Q300,120 370,80" fill="none" stroke="#ff6b35" stroke-width="2.5"/>
+                <circle cx="100" cy="130" r="4" fill="#00d4aa"/>
+                <circle cx="200" cy="110" r="4" fill="#00d4aa"/>
+                <circle cx="300" cy="125" r="4" fill="#00d4aa"/>
+                <text x="200" y="40" text-anchor="middle" font-family="IBM Plex Mono" font-size="10" fill="#c8d4dc">SECONDO INTERVENTO SR.66 · PROVINCIA PISTOIA</text>
+                <text x="200" y="170" text-anchor="middle" font-family="IBM Plex Mono" font-size="9" fill="#6b7c8a">TRACCIAMENTO · QUOTE ROSSE · AGGIORNAMENTO ELABORATI</text>
+              </svg>
+            </div>
+            <div class="project-meta-header">
+              <h3 class="project-name">Tracciamento Variante SR.66 — Pistoia</h3>
+              <span class="project-category">Infrastrutture · Pistoia</span>
+            </div>
+          </header>
+          <dl class="project-meta">
+            <div><dt>Committente</dt><dd>Provincia di Pistoia</dd></div>
+            <div><dt>Servizi</dt><dd>Tracciamento variante, assistenza cantiere, aggiornamento elaborati</dd></div>
+            <div><dt>Strumentazione</dt><dd>Stazione totale motorizzata, GPS, livellazione</dd></div>
+          </dl>
+          <button type="button" class="project-expand" aria-expanded="false" aria-controls="details-sr66">Dettagli</button>
+          <div id="details-sr66" class="project-details" hidden>
+            <p>Secondo intervento su SR.66 per Provincia di Pistoia; tracciamento esecutivo nuova viabilità; controllo quote rosse; aggiornamento continuo piante e profili per direzione lavori.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="testimonials-section" aria-labelledby="testimonials-title">
+      <div class="section-header">
+        <h2 id="testimonials-title" class="section-title">Testimonianze</h2>
+      </div>
+      <blockquote class="testimonials-grid">
+        <figure class="testimonial">
+          <figcaption class="testimonial-author">
+            <cite>Duccini Daniele</cite> — Amministratore Hydrocek srl
+          </figcaption>
+          <p>"Mi sono trovato molto bene con Topografica, è un ottimo partner. Sono tecnici del settore molto cordiali e capaci, pronti nell'assistenza in tempi brevi, li consiglio per l'ottimo lavoro che svolgono."</p>
+        </figure>
+        <figure class="testimonial">
+          <figcaption class="testimonial-author">
+            <cite>Stefano Capretti</cite> — Presidente Hyper srl
+          </figcaption>
+          <p>"La Topografica dispone di professionalità e tecnologie che la rendono una realtà professionale davvero interessante e di aiuto nello svolgimento della nostra attività d'ingegneria."</p>
+        </figure>
+        <figure class="testimonial">
+          <figcaption class="testimonial-author">
+            <cite>Provvedi Stefano</cite> — Fornitore
+          </figcaption>
+          <p>"La Società Topografica in questi anni si è dimostrata sempre attenta alle nuove tecnologie che il mercato propone per il rilievo topografico. Con noi ha provveduto all'aggiornamento continuo della strumentazione GPS e TPS, oltre all'acquisto di nuove tecnologie come quella recente del SAPR (drone). Pertanto Topografica a nostro giudizio è una delle società più dinamiche presenti nel mercato dei servizi professionali."</p>
+        </figure>
+      </blockquote>
+    </section>
+
+    <section class="team-section" aria-labelledby="team-title">
+      <div class="section-header">
+        <h2 id="team-title" class="section-title">Il Team — Nodi fondanti</h2>
+        <p class="section-desc">Tre soci tecnici con competenze complementari su tutti i servizi offerti.</p>
+      </div>
+      <ul class="team-grid" role="list">
+        <li class="team-member">
+          <figure class="member-photo" aria-label="Giampiero Gori">
+            <div class="photo-placeholder" aria-hidden="true">GG</div>
+          </figure>
+          <div class="member-info">
+            <h3 class="member-name">Giampiero Gori</h3>
+            <p class="member-role">Socio / Topografo senior</p>
+            <p class="member-focus">Rilievi catasto, infrastrutture, direzione tecnica</p>
+            <p class="member-code"><code>PT-001</code></p>
+          </div>
+        </li>
+        <li class="team-member">
+          <figure class="member-photo" aria-label="Alberto Lucarelli">
+            <div class="photo-placeholder" aria-hidden="true">AL</div>
+          </figure>
+          <div class="member-info">
+            <h3 class="member-name">Alberto Lucarelli</h3>
+            <p class="member-role">Socio / Topografo senior</p>
+            <p class="member-focus">Monitoraggi, sottoservizi, laser scanner, sicurezza cantieri</p>
+            <p class="member-code"><code>PT-002</code></p>
+          </div>
+        </li>
+        <li class="team-member">
+          <figure class="member-photo" aria-label="Marco Biagini">
+            <div class="photo-placeholder" aria-hidden="true">MB</div>
+          </figure>
+          <div class="member-info">
+            <h3 class="member-name">Marco Biagini</h3>
+            <p class="member-role">Socio / Topografo senior</p>
+            <p class="member-focus">Rilievi architettonici, fotogrammetria, 3D modeling</p>
+            <p class="member-code"><code>PT-003</code></p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="company-section" aria-labelledby="company-title">
+      <div class="section-header">
+        <h2 id="company-title" class="section-title">Società</h2>
+      </div>
+      <div class="company-content">
+        <p class="company-motto">"IL CARATTERE DEL TOPOGRAFO È LA FEDELTÀ AL DATO RILEVATO"</p>
+        <p>La TOPOGRAFICA s.r.l. opera con esperienza ultradecennale nel campo della topografia estendendo il proprio campo d'azione a tutto il territorio nazionale ed internazionale. Fin dalle sue origini l'Azienda ha lavorato in Italia, Mozambico, Messico, Zaire, Senegal e Algeria occupandosi della rilevazione, progettazione e restituzione di tutto ciò che è inerente la topografia e le sue applicazioni.</p>
+        <p>L'esperienza maturata nel tempo ha fatto sì che la società evolvesse il proprio bagaglio culturale, tecnico e la propria struttura con supporti sempre più aggiornati alle esigenze del settore. Nell'espletamento di tali servizi la TOPOGRAFICA s.r.l. può partecipare sia come unico fornitore che come partner insieme a società, consorzi ed enti collettivi aventi oggetto affine o complementare al proprio.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section" aria-labelledby="contact-title">
+      <div class="section-header">
+        <h2 id="contact-title" class="section-title">Contatti</h2>
+      </div>
+      <address class="contact-grid">
+        <div class="contact-item">
+          <h3>Sede</h3>
+          <p>Via Fonda di Sant'Agostino 4/F<br>51100 Pistoia (PT), Italia</p>
+        </div>
+        <div class="contact-item">
+          <h3>Telefono</h3>
+          <p><a href="tel:+390573534569">0573 534569</a></p>
+        </div>
+        <div class="contact-item">
+          <h3>Email</h3>
+          <p><a href="mailto:info@topograficasrl.com">info@topograficasrl.com</a></p>
+        </div>
+        <div class="contact-item">
+          <h3>Indicazioni</h3>
+          <p><a href="https://maps.google.com/?q=Via+Fonda+di+Sant'Agostino+4%2FF+Pistoia" target="_blank" rel="noopener">Apri in Google Maps</a></p>
+        </div>
+      </address>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <p>&copy; 2025 Topografica S.r.l. — Tutti i diritti riservati.</p>
+    <p class="footer-note">Prototipo: Campo di rilievo / Cantiere — Nessun form contatti · Nessun tracking · Nessun cookie non essenziale.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
